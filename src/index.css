@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+@layer components {
+  .button {
+    @apply rounded-full bg-[#635fc7] px-4 py-2 text-lg font-semibold text-white duration-200 hover:opacity-80;
+  }
+}
+
+@layer components {
+  .input {
+    @apply flex-grow rounded-md border-[0.5px] border-textColor bg-transparent px-4 
+    py-2 text-sm  outline-none outline-[1px] focus:border-blue;
+  }
+}
+
+.dropdown {
+  background-color: #00000080;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(96%) saturate(16%) hue-rotate(350deg)
+    brightness(104%) contrast(100%);
+}
+
+.select-status {
+  background-image: url("./assets/icon-chevron-down.svg");
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+}
+
+@layer base {
+  :root {
+    &,
+    &.light {
+      /* Grey */
+      --color-grey-50: #f9fafb;
+      --color-grey-100: #f3f4f6;
+      --color-grey-600: #4b5563;
+    }
+
+    &.dark {
+      --color-grey-100: #20212c;
+      --color-grey-50: #2b2c37;
+      --color-grey-600: #d1d5db;
+    }
+    --color-blue: #635fc7;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: var(--color-grey-100);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--color-blue);
+}
